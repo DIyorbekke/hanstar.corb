@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+}
+
+body{
+  background-color: rgb(252, 251, 205);
+}
+
+.bannerr {
+  position: relative;
+  height: 86vh;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.containir.animate {
+  animation: fadeIn 2s;
+  text-align: center;
+  display: flex;
+  padding-top: 10%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-title {
+  font-weight: 900;
+  color: #fff;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.bannerr p {
+  color: #fff;
+  font-size: 1.5em;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 600px;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  color: #000000; 
+  padding: 20px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.title h4 {
+  color: #666;
+}
+
+.design-img2 {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.design-img2 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.design-img2 button.btn1{
+  position: absolute;
+  top: 20px;
+  right: 70 v;
+}
+
+.design-img2 button.btn2{
+  position: absolute;
+  top: 230px;
+  right:380px;
+}
+.design-img2 button.btn3{
+  position: absolute;
+  top: 500px;
+  right:370px;
+}
+.design-img2 button.btn4{
+  position: absolute;
+  top: 570px;
+  right:975px;
+}
+.design-img2 button.btn5{
+  position: absolute;
+  top: 440px;
+  right:1110px;
+}
+
+
+button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  text-shadow: #000 5px 5px 5px ;
+  transition: all .5s ease;
+}
+
+button:hover {
+  font-size: 22px;
+}
