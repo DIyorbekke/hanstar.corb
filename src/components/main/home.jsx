@@ -1,6 +1,6 @@
-// Importing the global styles
 import "../../styles.css";
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next'
 
 import background1 from "../../../public/bg1.jpg";
 import background2 from "../../../public/bg2.jpg";
@@ -9,6 +9,8 @@ import bgKlasse from "../../../public/klasse.jpg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const [currentBackground, setCurrentBackground] = useState(0);
   const backgroundImages = [background1, background2, background3];
 
@@ -53,30 +55,26 @@ const Home = () => {
           <div className="title">
             <h2 className="pt-4">Наши услуги</h2>
             <h4>
-              Автосервис HANSTAR CORP - это современный подход к обслуживанию
-              автомобилей в Ташкенте. Мы предлагаем широкий спектр качественных
-              услуг для всех типов транспортных средств. У нас работают только
-              профессионалы, оборудование высокого качества. Мы гарантируем
-              надежность и качество всех выполняемых работ.
+              {t("home.desibscription")}
             </h4>
           </div>
 
           <div className="design-img2">
             <img src={bgKlasse} alt="" className="m-auto pt-4 pb-4" width={1000} />
 
-            <button className="btn1">
+            <button className="btn1 btn">
               <Link to={"/shoptoli"}>Кузов</Link>
             </button>
-            <button className="btn2">
+            <button className="btn2 btn">
               <Link to={"/mator"}>Двигатель</Link>
             </button>
-            <button className="btn3">
+            <button className="btn3 btn">
               <Link to={"/elektr"}>Электрооборудование</Link>
             </button>
-            <button className="btn4">
+            <button className="btn4 btn">
               <Link to={"/hadavoy"}>Ходовая часть</Link>
             </button>
-            <button className="btn5">
+            <button className="btn5 btn">
               <Link to={"/trans"}>Трансмиссия</Link>
             </button>
           </div>

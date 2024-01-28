@@ -103,7 +103,7 @@ body{
 }
 
 
-button {
+.btn {
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -114,6 +114,6 @@ button {
   transition: all .5s ease;
 }
 
-button:hover {
+.btn:hover {
   font-size: 22px;
 }

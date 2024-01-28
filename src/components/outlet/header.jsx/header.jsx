@@ -1,18 +1,27 @@
 import { Link } from "react-router-dom";
+import i18n from 'i18next'
+import './header.css'
+import { useTranslation } from 'react-i18next' // copy
 
 const Header = () => {
+  const { t } = useTranslation(); // copy
+
+  const handleClick = (lang) => {
+    i18n.changeLanguage(lang);
+  }
+
   return (
     <div>
       <header className="shadow-md font-sans">
         <section className="py-2 bg-gray-800 text-white text-right px-10">
           <p className="text-sm">
-            <strong className="mx-2">Address:</strong>Tashkent vil.
+            <strong className="mx-2">{t("nav.address")}:</strong>Tashkent vil.
             <strong className="mx-2">Contact No:</strong>+9981076294
           </p>
         </section>
         <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4 relative bg-white min-h-[70px]">
           <Link href="javascript:void(0)">
-            <h1 className="text-2xl font-bold">HANSTAR CORP</h1>
+            <h1 className="text-2xl font-bold">{t("nav.logo")}</h1>
           </Link>
           <button id="toggle" className="lg:hidden">
             <svg
@@ -36,7 +45,7 @@ const Header = () => {
                 to={"/"}
                 className="lg:hover:text-[#007bff] block font-semibold text-[15px]"
               >
-                Home
+                {t("nav.home")}
               </Link>
             </li>
             <li className="max-lg:border-b max-lg:py-2 px-3 max-lg:rounded">
@@ -45,7 +54,7 @@ const Header = () => {
                 href="javascript:void(0)"
                 className="lg:hover:text-[#007bff] text-[#333] block font-semibold text-[15px]"
               >
-                About
+                {t("nav.about")}
               </Link>
             </li>
             <li className="max-lg:border-b max-lg:py-2 px-3 max-lg:rounded">
@@ -63,6 +72,22 @@ const Header = () => {
               >
                 Reservation
               </Link>
+            </li>
+            <li>
+              <button className="">
+                <label className="dropdown">
+                  <div className="dd-button">
+                    Chane language
+                  </div>
+                  <input type="checkbox" className="dd-input" id="test" />
+                  <ul className="dd-menu">
+                    <li onClick={() => handleClick("uz")}>Uzbek</li>
+                    <li onClick={() => handleClick("ru")}>Pусский</li>
+                    <li onClick={() => handleClick("eng")}>English</li>
+                    <li onClick={() => handleClick("ko")}>한국인</li>
+                  </ul>
+                </label>
+              </button>
             </li>
           </ul>
         </div>
